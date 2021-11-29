@@ -28,10 +28,7 @@
                 <img src="public/images_hlavnaStranka/TechZarNapis.PNG" alt="logo">
                 <p>...PC, hardvér bazár</p>
             </a>
-            <a class="navbar-brand" href="?c=home">
-                <img src="public/images_hlavnaStranka/TechZarNapis.PNG" alt="logo">
-                <p>...PC, hardvér bazár</p>
-            </a>
+
 
 
             <ul class="navbar-nav gap-2">
