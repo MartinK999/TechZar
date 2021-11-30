@@ -1,4 +1,5 @@
-<?php /** @var Array $data */ ?>
+<?php /** @var Array $data */?>
+<script src="public/skriptRegister.js"></script>
 
 <div class="container register">
 <section class="vh-100 bg-image">

@@ -34,45 +34,7 @@ function checkFormState() {
     }
 }
 
-window.onload = () => {
-    validateInput(document.getElementById("meno"), function (value = null) {
-        if (value == null || value.length == 0) {
-            return "Meno musí byť zadané!";
-        }
-    });
 
-
-    validateInput(document.getElementById("login"), function (value = null) {
-        if (value == null || value.length == 0) {
-            return "Prihlasovacie meno musí byť zadané!";
-        }
-    });
-
-    validateInput(document.getElementById("mail"), function (value = null) {
-        if (value == null || value.length == 0) {
-            return "Mail musí byť zadaný!";
-        }
-        let re = new RegExp('^\\S+@\\S+\\.\\S+$');
-        if (!re.test(value)) {
-            return "Zadaný email nemá platný formát!"
-        }
-    });
-
-    validateInput(document.getElementById("password"), function (value = null) {
-        if (value == null || value.length == 0) {
-            return "Heslo musí byť zadané!";
-        }
-
-        if (value.length < 8) {
-            return "Heslo musí byť dlšie!";
-        }
-        let re = new RegExp('^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])');
-        if (!re.test(value)) {
-            return "Zadane heslo musí obsahovať malé, velké pismeno a číslo!"
-        }
-    });
-
-}
 
 window.onload = () => {
 
@@ -108,4 +70,3 @@ window.onload = () => {
         }
     });
 }
-

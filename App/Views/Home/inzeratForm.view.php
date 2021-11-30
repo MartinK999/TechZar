@@ -51,8 +51,12 @@
                     <input name="file" class="form-control" id="formFile" type="file">
                 </div>
 
+                <div id="submit-info">
+                    Formulár obsahuje chyby a nie je možné ho odoslať.
+
+                </div>
                 <div class="mb-3">
-                    <button type="submit" class="btn btn-primary">Odoslať</button>
+                    <button type="submit" class="btn btn-primary" id="submit">Odoslať</button>
                 </div>
             </div>
         </form>
