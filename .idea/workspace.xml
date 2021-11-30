@@ -1,6 +1,96 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="ca3d041d-373e-47ee-8d99-77b197850bb7" name="Changes" comment="test">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Controllers/AuthController.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Controllers/AuthController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Controllers/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Views/Auth/loginForm.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Views/Auth/loginForm.view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Views/Home/case.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Views/Home/case.view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Views/Home/cooling.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Views/Home/cooling.view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Views/Home/cpu.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Views/Home/cpu.view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Views/Home/gpu.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Views/Home/gpu.view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Views/Home/hdd.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Views/Home/hdd.view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Views/Home/inzeratForm.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Views/Home/inzeratForm.view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Views/Home/mb.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Views/Home/mb.view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Views/Home/myList.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Views/Home/myList.view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Views/Home/psu.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Views/Home/psu.view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Views/Home/ram.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Views/Home/ram.view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Views/Home/soloInzerat.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Views/Home/soloInzerat.view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css.css" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="21bgwZXuVHCXEJTaelgcZWcFf2Y" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="E:/PHPstorm/projects" />
+    <property name="DatabaseDriversLRU" value="mariadb" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ca3d041d-373e-47ee-8d99-77b197850bb7" name="Changes" comment="" />
+      <created>1638215440262</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1638215440262</updated>
+      <workItem from="1638215441733" duration="296000" />
+      <workItem from="1638266803057" duration="15879000" />
+    </task>
+    <task id="LOCAL-00001" summary="test">
+      <created>1638215690448</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1638215690448</updated>
+    </task>
+    <task id="LOCAL-00002" summary="test">
+      <created>1638215727376</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1638215727376</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="test" />
+    <option name="LAST_COMMIT_MESSAGE" value="test" />
   </component>
 </project>

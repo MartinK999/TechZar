@@ -5,12 +5,12 @@
         <div class="row d-flex justify-content-center align-items-center h-100">
             <div class="col-12 col-md-8 col-lg-6 col-xl-5">
                 <?php if ($data['error'] != "") { ?>
-                    <div class="alert alert-danger alert-dismissible">
-                        <button type="button" class="btn-close" data-dismiss="alert" ></button>
+                    <div class="alert alert-danger alert-dismissible" style="text-align: center">
+
                         <?= $data['error'] ?>
                     </div>
                 <?php } ?>
-                <div class="card bg-dark text-white" style="border-radius: 1rem;">
+                <div class="card bg-dark text-white" style="border-radius: 15px;">
                     <div class="card-body p-5 text-center">
 
                         <div class="mb-md-5 mt-md-4 pb-5">

@@ -20,7 +20,7 @@
                         </button>
                     </form>
                     </p>
-                    <img class="img-fluid grafiky" src="<?= \App\Config\Configuration::UPLOAD_DIR . $inzerat->getImage() ?>" class="rounded" alt="produkt" >
+                    <img class="img-fluid grafiky" src="<?= \App\Config\Configuration::UPLOAD_DIR . $inzerat->getImage() ?>" class="rounded" alt="Bez obrazku" >
                     <p class="text"><?= $inzerat->getText() ?></p>
                 </div>
 

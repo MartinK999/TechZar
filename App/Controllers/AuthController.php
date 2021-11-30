@@ -69,23 +69,6 @@ class AuthController extends AControllerRedirect
             ]);
     }
 
-    public function deleteAcc()
-    {
-        if (!Auth::isLogged()) {
-            $this->redirect('home');
-        }
-        $users = Users::getAll();
-
-        foreach ($users as $user)  {
-        if ($user->getLogin = $_SESSION['name']) {
-
-            $user->delete();
-
-            $this->redirect('home');
-        } }
-
-
-    }
 
     public function deleteInzerat() {
 
@@ -114,7 +97,7 @@ class AuthController extends AControllerRedirect
         if ($logged){
             $this->redirect('home');
         } else {
-            $this->redirect('auth','loginForm',['error' => 'Zlý Email alebo heslo!']);
+            $this->redirect('auth','loginForm',['error' => 'Nesprávne prihlasovacie údaje!']);
         }
     }
 

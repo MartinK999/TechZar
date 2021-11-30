@@ -21,27 +21,29 @@
 
                 <div class="form-group">
                     <label for="title">Nadpis :</label>
-                    <input type = "text" name="title" class="form-control" rows="5" id="title">
+                    <input type = "text" name="title" class="form-control" id="title">
 
                 </div>
                 <div class="form-group">
                     <label for="text">Text :</label>
-                    <input type = "text" name="text" class="form-control input-lg" rows="5"  id="text">
+
+
+                    <textarea class="form-control" type = "text" id="exampleFormControlTextarea1" rows="3" name="text"></textarea>
 
                 </div>
                 <div class="form-group">
                     <label for="address">Adresa :</label>
-                    <input type = "text" name="address" class="form-control" rows="5"  id="address">
+                    <input type = "text" name="address" class="form-control"  id="address">
 
                 </div>
                 <div class="form-group">
                     <label for="phone_number">Telefónne číslo :</label>
-                    <input type = "text" name="phone_number" class="form-control" rows="5"  id="phone_number">
+                    <input type = "text" name="phone_number" class="form-control" id="phone_number">
 
                 </div>
                 <div class="form-group">
                     <label for="price">Cena :</label>
-                    <input type = "text" name="price" class="form-control" rows="5"  id="price">
+                    <input type = "text" name="price" class="form-control" id="price">
 
                 </div>
                 <div class="mb-3">

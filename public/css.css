@@ -31,26 +31,28 @@ p.cena {
 
 
 
-.container.register > .container.main {
+.container.main > container.register {
     padding-bottom: 0;
 }
 
 .container.register{
-    background: linear-gradient(180deg, rgba(47,79,79,1) 0%, rgba(0,0,6,1) 97%, rgba(47,79,79,1) 100%);
-    max-width: none;
-    padding-bottom: 500px;
+
+    padding-bottom: 400px;
     padding-top: 0;
     margin-bottom: 0;
 
 }
 
-
+.form-control.input-lg {
+    line-height: 6;
+}
 
 .container.main{
     max-width: 100%;
     padding-right: 0;
     padding-left: 0;
     padding-top: 0;
+
 
 
 }
@@ -199,7 +201,8 @@ footer {
     color: white;
     text-align: center;
     padding: 10px;
-    margin-top: 20%;
+
+
 }
 
 
@@ -212,45 +215,47 @@ footer {
     }
 
 
-}
+    @media screen and (max-width: 760px) {
+        a > p {
+            color: black;
+            font-style: italic;
+            text-align: right;
+            margin-top: 0;
+            float: none;
+        }
 
-@media screen and (max-width: 760px) {
-    a > p {
-        color: black;
-        font-style: italic;
-        text-align: right;
-        margin-top: 0;
-        float: none;
-    }
+        col {
+            margin-left: 1000px;
+        }
 
-    col {
-        margin-left: 1000px;
-    }
-
-    .row.allProducts {
-        height: 500px;
-    }
-
-
-}
-
-@media screen and (max-width: 575px) {
-
-    p.cena {
-        margin-top: 0;
-        padding-bottom: 3%;
-        text-align: center;
+        .row.allProducts {
+            height: 500px;
+        }
 
 
     }
 
-    .row.allProducts {
-        height: 500px;
-    }
+    @media screen and (max-width: 575px) {
 
-    ul.navbar.gap-2{
-        align-content: center !important;
-    }
+        p.cena {
+            margin-top: 0;
+            padding-bottom: 3%;
+            text-align: center;
 
+
+        }
+
+        .row.allProducts {
+            height: 500px;
+        }
+
+        ul.navbar.gap-2 {
+            align-content: center !important;
+        }
+
+
+
+
+    }
 }
 

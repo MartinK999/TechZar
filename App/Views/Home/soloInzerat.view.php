@@ -13,7 +13,7 @@
 
                 </div>
                 <div class="container solofoto">
-                    <img  src="<?= \App\Config\Configuration::UPLOAD_DIR . $inzerat->getImage() ?>" class="rounded" alt="produkt" >
+                    <img  src="<?= \App\Config\Configuration::UPLOAD_DIR . $inzerat->getImage() ?>" class="rounded" alt="Bez obrazku" >
 
                 </div>
                 <div class="row textsolo">

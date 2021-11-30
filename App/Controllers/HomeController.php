@@ -34,6 +34,8 @@ class HomeController extends AControllerRedirect
             if ($_FILES["file"]["error"] == UPLOAD_ERR_OK) {
                 $name = date('Y-m-d-H-i-s_') . $_FILES['file']['name'];
                 move_uploaded_file($_FILES['file']['tmp_name'], Configuration::UPLOAD_DIR . "$name");
+            }
+        }
                 $newInzerat = new Inzerat();
                 $newInzerat->setImage($name);
                 $newInzerat->setCategory($this->request()->getValue('category'));
@@ -44,8 +46,7 @@ class HomeController extends AControllerRedirect
                 $newInzerat->setPrice($this->request()->getValue('price'));
                 $newInzerat->setLoginFk($_SESSION["name"]);
                 $newInzerat->save();
-            }
-        }
+
         $this->redirect('home');
     }
 
