@@ -13,28 +13,38 @@
                             <form method="post" action="?c=auth&a=register">
 
                                 <div class="form-outline mb-4">
-                                    <input type="text" id="form3Example1cg" class="form-control form-control-lg" name="fullname"/>
-                                    <label class="form-label" for="form3Example1cg">Tvoje meno</label>
+                                    <label class="form-label" for="meno">Tvoje meno</label>
+                                    <input type="text" id="meno" class="form-control form-control-lg" name="fullname" required>
+
                                 </div>
                                 <div class="form-outline mb-4">
-                                    <input type="login" id="form3Example2cg" class="form-control form-control-lg" name="login" />
-                                    <label class="form-label" for="form3Example2cg">Tvoje Prihlasovacie meno</label>
+                                    <label class="form-label" for="form3Example2cg">Tvoje prihlasovacie meno</label>
+                                    <input type="login" id="login" class="form-control form-control-lg" name="login" required>
+
                                 </div>
 
                                 <div class="form-outline mb-4">
-                                    <input type="email" id="form3Example3cg" class="form-control form-control-lg" name="email"/>
                                     <label class="form-label" for="form3Example3cg">Tvoj Email</label>
+                                    <input type="email"  id="mail" class="form-control form-control-lg" name="email" required>
+
                                 </div>
 
                                 <div class="form-outline mb-4">
-                                    <input type="password" id="form3Example4cg" class="form-control form-control-lg" name="password"/>
                                     <label class="form-label" for="form3Example4cg">Heslo</label>
+                                    <input type="password" id="password" class="form-control form-control-lg" name="password" required>
+
                                 </div>
 
 
-                                <div class="d-flex justify-content-center">
-                                    <button type="submit" class="btn btn-success btn-block btn-lg gradient-custom-4 text-body">Registrovať</button>
+                                <div id="submit-info">
+                                    Formulár obsahuje chyby a nie je možné ho odoslať.
+
                                 </div>
+                                <div class="d-flex justify-content-center" >
+
+                                    <button type="submit" class="btn btn-success btn-block btn-lg gradient-custom-4 text-body" id="submit">Registrovať</button>
+                                </div>
+
 
                                 <p class="text-center text-muted mt-5 mb-0">Už máš vytvorený účet? <a href="?c=Auth&a=loginForm" class="fw-bold text-body"><u>Tu sa prihlás</u></a></p>
 

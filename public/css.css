@@ -1,5 +1,30 @@
 * {
     box-sizing: border-box;
+
+
+}
+
+.error {
+    color: red;
+    padding: 5px;
+    background-color: #ffaaaa;
+}
+
+#submit-info {
+    display: none;
+    padding: 5px;
+    background-color: #ffaaaa;
+    color: red;
+}
+
+
+
+.has-error {
+    color: red;
+}
+.has-error textarea,
+.has-error input {
+    border-color: red;
 }
 
 img {

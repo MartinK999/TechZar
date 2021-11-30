@@ -16,12 +16,12 @@
                         <div class="mb-md-5 mt-md-4 pb-5">
 
                             <h2 class="fw-bold mb-2 text-uppercase">Prihlásenie</h2>
-                            <p class="text-white-50 mb-5">Prosím vložte svoj Email a heslo!</p>
+                            <p class="text-white-50 mb-5">Prosím vložte svoje prihlasovacie meno a heslo!</p>
 
                             <form method="post" action="?c=auth&a=login">
 
                             <div class="form-outline form-white mb-4">
-                                <input type="login" id="typeLoginX" class="form-control" name="login" oninvalid="setCustomValidity('Prosím zadajte Prihlasovacie meno')" required>
+                                <input type="login" id="login" class="form-control" name="login" oninvalid="setCustomValidity('Prosím zadajte Prihlasovacie meno')" required>
                                 <label class="form-label" for="typeLoginX">Prihlasovacie meno</label>
                             </div>
 

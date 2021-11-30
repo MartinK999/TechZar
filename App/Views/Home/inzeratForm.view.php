@@ -6,7 +6,7 @@
             <div>
                 <div class="form-group">
                     <label for="category">Kategória :</label>
-                    <select class="form-select mt-3" name="category" id="category">
+                    <select  class="form-select mt-3" name="category" id="category"  required>
                         <option>Grafické karty</option>
                         <option>Procesory</option>
                         <option>Základné dosky</option>
@@ -21,7 +21,7 @@
 
                 <div class="form-group">
                     <label for="title">Nadpis :</label>
-                    <input type = "text" name="title" class="form-control" id="title">
+                    <input type = "text" name="title" class="form-control" id="title" required>
 
                 </div>
                 <div class="form-group">
@@ -33,17 +33,17 @@
                 </div>
                 <div class="form-group">
                     <label for="address">Adresa :</label>
-                    <input type = "text" name="address" class="form-control"  id="address">
+                    <input type = "text" name="address" class="form-control"  id="address" required>
 
                 </div>
                 <div class="form-group">
                     <label for="phone_number">Telefónne číslo :</label>
-                    <input type = "text" name="phone_number" class="form-control" id="phone_number">
+                    <input type = "text" name="phone_number"  class="form-control" id="mobil" required>
 
                 </div>
                 <div class="form-group">
                     <label for="price">Cena :</label>
-                    <input type = "text" name="price" class="form-control" id="price">
+                    <input type = "text" name="price" class="form-control" id="price" required>
 
                 </div>
                 <div class="mb-3">
