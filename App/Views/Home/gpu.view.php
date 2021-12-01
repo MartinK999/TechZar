@@ -7,13 +7,16 @@
 
         <div class="container inzeraty">
             <p>
-            <form method="post" action="?c=home&a=soloInzerat">
+            <form  method="post" action="?c=home&a=soloInzerat">
                 <input type="hidden" name="inzeratId" value="<?= $inzerat->getId() ?>">
                 <button class="btn btn-primary  text-uppercase fw-bold"
                         style="background: none; color:#64496d; border-color: white" class="floated"
                         type="submit">
 
-                    <mark><?= $inzerat->getTitle() ?></mark>
+
+                    <mark class="style"><?= $inzerat->getTitle() ?></mark>
+
+
                 </button>
             </form></p>
             <img class="img-fluid grafiky" src="<?= \App\Config\Configuration::UPLOAD_DIR . $inzerat->getImage() ?>" class="rounded" alt="Bez obrazku" >

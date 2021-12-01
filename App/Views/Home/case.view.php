@@ -15,7 +15,7 @@
                                     style="background: none; color:#64496d; border-color: white" class="floated"
                                     type="submit">
 
-                                <mark><?= $inzerat->getTitle() ?></mark>
+                                <mark class="style"><?= $inzerat->getTitle() ?></mark>
                             </button>
                         </form></p>
                         <img class="img-fluid grafiky"

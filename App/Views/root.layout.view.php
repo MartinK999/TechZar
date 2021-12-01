@@ -59,8 +59,7 @@
 </div>
 <div class="row ">
     <div class="col-sm">
-        <div style="background-image: url('public/images_hlavnaStranka/searchBarFilter.jpeg')">
-
+        <div class="background" style="background-image: url(public/images_hlavnaStranka/searchBarFilter.jpeg)">
             <div class="container">
 
                 <form class="d-flex">

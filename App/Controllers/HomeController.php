@@ -6,6 +6,7 @@ use App\Auth;
 use App\Config\Configuration;
 use App\Core\AControllerBase;
 use App\Models\Inzerat;
+use App\Models\Users;
 
 /**
  * Class HomeController
@@ -52,10 +53,12 @@ class HomeController extends AControllerRedirect
 
     public function soloInzerat(){
         $inzeraty = Inzerat::getAll();
+        $users = Users::getAll();
 
         $inzeratId = $this->request()->getValue('inzeratId');
         return $this->html(
             [
+                'users' => $users,
                 'inzeraty' => $inzeraty,
                 'inzeratId' => $inzeratId
             ]);

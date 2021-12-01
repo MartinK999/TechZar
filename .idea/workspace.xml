@@ -3,6 +3,18 @@
   <component name="ChangeListManager">
     <list default="true" id="ca3d041d-373e-47ee-8d99-77b197850bb7" name="Changes" comment="vyrieseny window.onload (vytvoreny novy js file a pridany do register viewu)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Controllers/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Views/Home/case.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Views/Home/case.view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Views/Home/cooling.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Views/Home/cooling.view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Views/Home/cpu.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Views/Home/cpu.view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Views/Home/gpu.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Views/Home/gpu.view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Views/Home/hdd.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Views/Home/hdd.view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Views/Home/mb.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Views/Home/mb.view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Views/Home/psu.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Views/Home/psu.view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Views/Home/ram.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Views/Home/ram.view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Views/Home/soloInzerat.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Views/Home/soloInzerat.view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Views/root.layout.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Views/root.layout.view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +49,12 @@
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Martin\Desktop\php_mysql\www\Semestralka2\TechZar\public\images_hlavnaStranka" />
+      <recent name="C:\Users\Martin\Desktop\php_mysql\www\Semestralka2\TechZar\public\public" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -47,6 +65,8 @@
       <updated>1638215440262</updated>
       <workItem from="1638215441733" duration="296000" />
       <workItem from="1638266803057" duration="30239000" />
+      <workItem from="1638311424608" duration="770000" />
+      <workItem from="1638354183742" duration="11503000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1638215690448</created>
@@ -83,7 +103,14 @@
       <option name="project" value="LOCAL" />
       <updated>1638310680397</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="vyrieseny window.onload (vytvoreny novy js file a pridany do register viewu)">
+      <created>1638311457647</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1638311457647</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
