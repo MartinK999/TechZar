@@ -38,7 +38,18 @@ img {
 
 }
 
+h2.oznam {
+    text-align: center;
+    margin-top: 20%;
+    margin-bottom: auto;
+}
 
+img.empty {
+    text-align: center;
+    margin-right: auto;
+    margin-left: 45%;
+    width: 10%;
+}
 
 img.img-fluid {
     float: left;

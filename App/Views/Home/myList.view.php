@@ -51,7 +51,8 @@
     <?php }
          } ?>
     <?php if ($pocetInzeratov == 0) { ?>
-        <h2>Aktuálne nemáte žiadny inzerát</h2>
+        <h2 class="oznam">Aktuálne nemáte žiadny inzerát.</h2>
+        <img class="empty" src="public/images_hlavnaStranka/empty-folder.png">
     <?php } ?>
 </div>
 

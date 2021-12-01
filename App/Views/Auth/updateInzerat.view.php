@@ -1,4 +1,5 @@
 <?php /** @var Array $data */ ?>
+<script src="public/skriptUpdate.js"></script>
 <div class="row">
     <?php foreach ($data['inzeraty'] as $inzerat){ if ($inzerat->getId() == $data['id']){?>
     <div class="col">
@@ -27,7 +28,8 @@
                     </div>
                     <div class="form-group">
                         <label for="text">Text :</label>
-                        <input type = "text" name="text" class="form-control input-lg" rows="5"  id="text" value="<?= $inzerat->getText()?>">
+                        <textarea class="form-control" type = "text" id="text" rows="3" name="text"><?= $inzerat->getText()?></textarea>
+
 
                     </div>
                     <div class="form-group">
@@ -37,7 +39,7 @@
                     </div>
                     <div class="form-group">
                         <label for="phone_number">Telefónne číslo :</label>
-                        <input type = "text" name="phone_number" class="form-control" rows="5"  id="phone_number" value="<?= $inzerat->getPhoneNumber()?>">
+                        <input type = "text" name="phone_number" class="form-control" rows="5"  id="mobil" value="<?= $inzerat->getPhoneNumber()?>">
 
                     </div>
                     <div class="form-group">
@@ -50,8 +52,12 @@
                         <input name="file" class="form-control" id="formFile" type="file">
                     </div>
 
+                    <div id="submit-info">
+                        Formulár obsahuje chyby a nie je možné ho odoslať.
+
+                    </div>
                     <div class="mb-3">
-                        <button type="submit" class="btn btn-primary">Upraviť</button>
+                        <button type="submit" class="btn btn-primary"  id="submit">Upraviť</button>
                     </div>
                 </div>
             </form>
