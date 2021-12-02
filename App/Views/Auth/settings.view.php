@@ -27,11 +27,8 @@
                 </div>
 
         </div>
-        <form method="post" action="?c=auth&a=deleteAcc">
-        <div class="mb-3" style="text-align: center">
-            <button type="submit" class="btn btn-danger" name="delete">Zmazať účet!</button>
-        </div>
-        </form>
+
+
     </div>
     <?php } } ?>
 </div>

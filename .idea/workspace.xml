@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ca3d041d-373e-47ee-8d99-77b197850bb7" name="Changes" comment="uprava vzhladu soloInzerat">
+    <list default="true" id="ca3d041d-373e-47ee-8d99-77b197850bb7" name="Changes" comment="pridanie verifikacie uprave inzeratu a pridanie ikonky v zalozke">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/Views/Auth/updateInzerat.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Views/Auth/updateInzerat.view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/Views/Home/myList.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Views/Home/myList.view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/Views/root.layout.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Views/root.layout.view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Views/Auth/settings.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Views/Auth/settings.view.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +55,7 @@
       <workItem from="1638215441733" duration="296000" />
       <workItem from="1638266803057" duration="30239000" />
       <workItem from="1638311424608" duration="770000" />
-      <workItem from="1638354183742" duration="17919000" />
+      <workItem from="1638354183742" duration="20647000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1638215690448</created>
@@ -109,7 +106,14 @@
       <option name="project" value="LOCAL" />
       <updated>1638366110417</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="pridanie verifikacie uprave inzeratu a pridanie ikonky v zalozke">
+      <created>1638373936441</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1638373936441</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -133,6 +137,7 @@
     <MESSAGE value="javascript validacia formularov (registracie a podania inzeratu)" />
     <MESSAGE value="vyrieseny window.onload (vytvoreny novy js file a pridany do register viewu)" />
     <MESSAGE value="uprava vzhladu soloInzerat" />
-    <option name="LAST_COMMIT_MESSAGE" value="uprava vzhladu soloInzerat" />
+    <MESSAGE value="pridanie verifikacie uprave inzeratu a pridanie ikonky v zalozke" />
+    <option name="LAST_COMMIT_MESSAGE" value="pridanie verifikacie uprave inzeratu a pridanie ikonky v zalozke" />
   </component>
 </project>
