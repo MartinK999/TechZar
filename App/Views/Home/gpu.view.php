@@ -27,6 +27,9 @@
     </div>
     <div class="col-sm-2">
         <p class="cena"><strong><?= $inzerat->getPrice() ?>€</strong></p>
+
+
+
     </div>
 
 </div>

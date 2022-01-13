@@ -26,14 +26,29 @@
             <div class="row contacts" >
                 <div class="col">
                 <p class="soloInfo" style="text-decoration: underline;">Kontakty:</p>
-                <p class="mail">Tel. číslo: <strong><?= $inzerat->getPhoneNumber() ?></strong></p>
-                <p class="mail">Email: <strong><?= $user->getEmail() ?></strong></p>
+                <p class="mobil">Tel. číslo: <strong><?= $inzerat->getPhoneNumber() ?></strong></p>
+                <p class="email">Email: <strong><?= $user->getEmail() ?></strong></p>
+                    <p class="address">Adresa: <strong><?= $inzerat->getAddress() ?></strong></p>
                 </div>
                 <div class="col">
                 <p class="soloInfo" style="text-decoration: underline;">Inzerát podal:</p>
-                <p class="mail">Prezívka: <strong><?= $inzerat->getLoginFk() ?></strong></p>
-                <p class="mail">Meno: <strong><?= $user->getFullname() ?></strong></p>
-                <p class="mail">Adresa: <strong><?= $inzerat->getAddress() ?></strong></p>
+
+                    <form method="post" action="?c=home&a=review">
+                        <span>Prezívka: </span>
+                        <input type="hidden" name="userLogin"  value="<?= $inzerat->getLoginFk() ?>">
+                        <button class="btn btn-primary "
+                                style="background: none; color:#ffffff; border-color: white"
+                                type="submit">
+
+                            <mark><?= $inzerat->getLoginFk() ?></mark>
+                        </button>
+                    </form></p>
+
+
+
+
+                <p class="name">Meno: <strong><?= $user->getFullname() ?></strong></p>
+
                 </div>
 
             </div>

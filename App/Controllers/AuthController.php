@@ -6,6 +6,7 @@ use App\Auth;
 use App\Config\Configuration;
 use App\Core\Responses\Response;
 use App\Models\Inzerat;
+use App\Models\Review;
 use App\Models\users;
 
 class AuthController extends AControllerRedirect
@@ -54,6 +55,48 @@ class AuthController extends AControllerRedirect
             ]);
     }
 
+    public function updateProfile()
+    {
+        if (!Auth::isLogged()) {
+            $this->redirect('home');
+        }
+        $users = Users::getAll();
+        $userLogin = $this->request()->getValue('login');
+
+        return $this->html(
+            [
+                'users' => $users,
+                'login' => $userLogin
+            ]);
+    }
+
+    public function makeUpdateProfile()
+    {
+        if(!Auth::isLogged()){
+            $this->redirect('home');
+        }
+
+        $users = Users::getAll();
+
+
+        foreach ($users as $u) {
+            if($u->getLogin() == $this->request()->getValue('login')){
+
+                $u->setFullname($this->request()->getValue('fullname'));
+                $u->setEmail($this->request()->getValue('email'));
+                $u->setPassword($this->request()->getValue('password'));
+
+
+                $u->save();
+
+            }
+
+        }
+
+        $this->redirect('auth','settings');
+
+    }
+
     public function settings()
     {
         if (!Auth::isLogged()) {
@@ -87,6 +130,41 @@ class AuthController extends AControllerRedirect
         $this->redirect('home','myList');
     }
 
+    public function deleteProfile() {
+        if(!Auth::isLogged()){
+            $this->redirect('home');
+        }
+        $userLogin = $this->request()->getValue('login');
+        $users = Users::getAll();
+        $inzeraty = Inzerat::getAll();
+        $reviews = Review::getAll();
+        foreach ($users as $u) {
+            if($userLogin == $u->getLogin())
+            {
+                foreach ($reviews as $r) {
+                    if($userLogin == $r->getUserWriter())
+                    {
+
+                        $r->delete();
+                    }
+                }
+
+                foreach ($inzeraty as $i) {
+                    if($userLogin == $i->getLoginFk())
+                    {
+
+                        $i->delete();
+                    }
+                }
+                Auth::logout();
+                $u->delete();
+            }
+        }
+        $this->redirect('home');
+    }
+
+
+
     public function login()
     {
         $login = $this->request()->getValue('login');
@@ -106,17 +184,21 @@ class AuthController extends AControllerRedirect
     {
 
         $newUser = new Users();
+
         $newUser->setLogin($this->request()->getValue('login'));
         $newUser->setFullname($this->request()->getValue('fullname'));
         $newUser->setEmail($this->request()->getValue('email'));
         $newUser->setPassword($this->request()->getValue('password'));
-        $newUser->save();
 
-
-        $this->redirect('auth','loginForm');
-
-
-
+        $registered = Auth::register($this->request()->getValue('login'),$this->request()->getValue('email'));
+        if ($registered == 3){
+            $newUser->save();
+            $this->redirect('auth','loginForm');
+        } else if ($registered == 1){
+            $this->redirect('auth','registrationForm',['error' => 'Uzivatel so zadanym loginom uz existuje!']);
+        }  else if ($registered == 2){
+            $this->redirect('auth','registrationForm',['error' => 'Uzivatel so zadanym emailom uz existuje!']);
+        }
     }
 
     public function update()

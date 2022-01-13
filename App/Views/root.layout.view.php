@@ -7,7 +7,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="public/css.css">
 
@@ -17,8 +18,6 @@
     <link rel="shortcut icon" type="image/jpg" href="public/images_hlavnaStranka/TechZarLogoZalozka.png"/>
 
 </head>
-
-
 
 
 <body>
@@ -33,15 +32,14 @@
             </a>
 
 
-
             <ul class="navbar-nav gap-2">
                 <?php if (\App\Auth::isLogged()) { ?>
 
                     <p class="vitajte" style="padding-top: 2%">Vitajte, <?php echo $_SESSION['name'] ?>!</p>
 
-                <li class="nav-item">
-                <a href="?c=Auth&a=logout" class="btn btn-danger" role="button">Odhlásiť</a>
-                </li>
+                    <li class="nav-item">
+                        <a href="?c=Auth&a=logout" class="btn btn-danger" role="button">Odhlásiť</a>
+                    </li>
                 <?php } else { ?>
 
                     <li class="nav-item">
@@ -77,18 +75,18 @@
 
     <ul class="navbar-nav">
         <?php if (\App\Auth::isLogged()) { ?>
-        <li class="nav-item">
-            <a class="nav-link" href="?c=home">Domov</a>
-        </li>
-        <li class="nav-item ">
-            <a class="nav-link" href="?c=home&a=myList">Moje inzeráty</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="?c=home&a=inzeratForm">Pridať inzerát</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="?c=home&a=contact">Kontakt</a>
-        </li>
+            <li class="nav-item">
+                <a class="nav-link" href="?c=home">Domov</a>
+            </li>
+            <li class="nav-item ">
+                <a class="nav-link" href="?c=home&a=myList">Moje inzeráty</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="?c=home&a=inzeratForm">Pridať inzerát</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="?c=home&a=contact">Kontakt</a>
+            </li>
             <li class="nav-item">
                 <a class="nav-link" href="?c=Auth&a=settings">Účet</a>
             </li>
@@ -109,8 +107,6 @@
 </nav>
 
 
-
-
 <div class="container main">
 
     <?= $contentHTML ?>
@@ -121,7 +117,7 @@
 
 <footer>
     <p>
-    ©2021 TechZar.sk - <strong>Inzercia,bazár</strong>
+        ©2021 TechZar.sk - <strong>Inzercia,bazár</strong>
     </p>
 
 </footer>

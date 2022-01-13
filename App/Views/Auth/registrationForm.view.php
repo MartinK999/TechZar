@@ -7,6 +7,12 @@
         <div class="container h-100">
             <div class="row  justify-content-center align-items-center h-100">
                 <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+                    <?php if ($data['error'] != "") { ?>
+                        <div class="alert alert-danger alert-dismissible" style="text-align: center">
+
+                            <?= $data['error'] ?>
+                        </div>
+                    <?php } ?>
                     <div class="card" style="border-radius: 15px;">
                         <div class="card-body p-5">
                             <h2 class="text-uppercase text-center mb-5">Vytvoriť účet</h2>

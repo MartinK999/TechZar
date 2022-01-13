@@ -5,7 +5,9 @@ namespace App\Controllers;
 use App\Auth;
 use App\Config\Configuration;
 use App\Core\AControllerBase;
+use App\Models\Favourite;
 use App\Models\Inzerat;
+use App\Models\Review;
 use App\Models\Users;
 
 /**
@@ -24,6 +26,23 @@ class HomeController extends AControllerRedirect
             [
                 'post' => 'test'
             ]);
+    }
+
+    public function uploadReview()
+    {
+        if (!Auth::isLogged()) {
+            $this->redirect('home');
+        }
+
+        $newReview = new Review();
+        $newReview->setUserLogin($this->request()->getValue('user_login'));
+        $newReview->setUserWriter($this->request()->getValue('user_writer'));
+        $newReview->setText($this->request()->getValue('text'));
+        $newReview->setRating($this->request()->getValue('rating'));
+        $newReview->setDate(date('d.m.Y   H:i:s',strtotime('+1 hour')));
+        $newReview->save();
+
+        $this->redirect('home');
     }
 
     public function upload()
@@ -50,6 +69,7 @@ class HomeController extends AControllerRedirect
 
         $this->redirect('home');
     }
+
 
     public function soloInzerat(){
         $inzeraty = Inzerat::getAll();
@@ -80,12 +100,59 @@ class HomeController extends AControllerRedirect
     }
 
 
+
+    public function reviewForm()
+    {
+        $userLogin = $this->request()->getValue('userLogin');
+
+        if (!Auth::isLogged()) {
+            $this->redirect('home');
+        }
+        return $this->html(['userLogin' => $userLogin]);
+    }
+
     public function inzeratForm()
     {
         if (!Auth::isLogged()) {
             $this->redirect('home');
         }
         return $this->html();
+    }
+
+
+
+    public function deleteReview() {
+
+        if(!Auth::isLogged()){
+            $this->redirect('home');
+        }
+        $reviewId = $this->request()->getValue('id');
+        $reviews = Review::getAll();
+        foreach ($reviews as $r) {
+            if($reviewId == $r->getId())
+            {
+                $r->delete();
+            }
+        }
+
+        $this->redirect('home');
+    }
+
+    public function review()
+    {
+        $inzeraty = Inzerat::getAll();
+        $userLogin = $this->request()->getValue('userLogin');
+        $reviews = Review::getAll();
+        $users = Users::getAll();
+
+        return $this->html(
+            [
+                'users' => $users,
+                'userLogin' => $userLogin,
+                'reviews' => $reviews,
+                'inzeraty' => $inzeraty
+            ]
+        );
     }
 
     public function contact()
