@@ -35,10 +35,10 @@ class HomeController extends AControllerRedirect
         }
 
         $newReview = new Review();
-        $newReview->setUserLogin($this->request()->getValue('user_login'));
-        $newReview->setUserWriter($this->request()->getValue('user_writer'));
-        $newReview->setText($this->request()->getValue('text'));
+        $newReview->setUserWriter($this->request()->getValue('userWriter'));
+        $newReview->setUserId($this->request()->getValue('userId'));
         $newReview->setRating($this->request()->getValue('rating'));
+        $newReview->setText($this->request()->getValue('text'));
         $newReview->setDate(date('d.m.Y   H:i:s',strtotime('+1 hour')));
         $newReview->save();
 
@@ -64,7 +64,7 @@ class HomeController extends AControllerRedirect
                 $newInzerat->setAddress($this->request()->getValue('address'));
                 $newInzerat->setPhoneNumber($this->request()->getValue('phone_number'));
                 $newInzerat->setPrice($this->request()->getValue('price'));
-                $newInzerat->setLoginFk($_SESSION["name"]);
+                $newInzerat->setUserId($_SESSION["id"]);
                 $newInzerat->save();
 
         $this->redirect('home');
@@ -101,14 +101,18 @@ class HomeController extends AControllerRedirect
 
 
 
-    public function reviewForm()
+    public function reviewForm() //TODO 1. id
     {
         $userLogin = $this->request()->getValue('userLogin');
-
+        $userId = $this->request()->getValue('userId');
         if (!Auth::isLogged()) {
             $this->redirect('home');
         }
-        return $this->html(['userLogin' => $userLogin]);
+        return $this->html(
+            [
+                'userLogin' => $userLogin,
+                'userId' => $userId
+            ]);
     }
 
     public function inzeratForm()
@@ -138,17 +142,21 @@ class HomeController extends AControllerRedirect
         $this->redirect('home');
     }
 
-    public function review()
+    public function review() //TODO 2. id
     {
         $inzeraty = Inzerat::getAll();
+        $userId = $this->request()->getValue('userId');
         $userLogin = $this->request()->getValue('userLogin');
+        $userWriter = $this->request()->getValue('userWriter');
         $reviews = Review::getAll();
         $users = Users::getAll();
 
         return $this->html(
             [
                 'users' => $users,
+                'userId' => $userId,
                 'userLogin' => $userLogin,
+                'userWriter' => $userWriter,
                 'reviews' => $reviews,
                 'inzeraty' => $inzeraty
             ]

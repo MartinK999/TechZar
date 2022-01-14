@@ -7,8 +7,8 @@ class Review extends \App\Core\Model
 {
     public function __construct(
         public int     $id = 0,
-        public ?string $user_writer = "",
-        public ?string $user_login = "",
+        public int     $user_writer = 0,
+        public int     $user_id = 0,
         public int     $rating = 0,
         public ?string $text = "",
         public ?string $date = ""
@@ -19,7 +19,7 @@ class Review extends \App\Core\Model
 
     static public function setDbColumns()
     {
-        return ['id', 'user_writer', 'user_login', 'rating', 'text', 'date'];
+        return ['id', 'user_writer', 'user_id', 'rating', 'text', 'date'];
     }
 
     static public function setTableName()
@@ -43,37 +43,8 @@ class Review extends \App\Core\Model
         $this->id = $id;
     }
 
-    /**
-     * @return string|null
-     */
-    public function getUserWriter(): ?string
-    {
-        return $this->user_writer;
-    }
 
-    /**
-     * @param string|null $user_writer
-     */
-    public function setUserWriter(?string $user_writer): void
-    {
-        $this->user_writer = $user_writer;
-    }
 
-    /**
-     * @return string|null
-     */
-    public function getUserLogin(): ?string
-    {
-        return $this->user_login;
-    }
-
-    /**
-     * @param string|null $user_login
-     */
-    public function setUserLogin(?string $user_login): void
-    {
-        $this->user_login = $user_login;
-    }
 
     /**
      * @return int
@@ -121,5 +92,37 @@ class Review extends \App\Core\Model
     public function setDate(?string $date): void
     {
         $this->date = $date;
+    }
+
+    /**
+     * @return int
+     */
+    public function getUserId(): int
+    {
+        return $this->user_id;
+    }
+
+    /**
+     * @param int $user_id
+     */
+    public function setUserId(int $user_id): void
+    {
+        $this->user_id = $user_id;
+    }
+
+    /**
+     * @return int
+     */
+    public function getUserWriter(): int
+    {
+        return $this->user_writer;
+    }
+
+    /**
+     * @param int $user_writer
+     */
+    public function setUserWriter(int $user_writer): void
+    {
+        $this->user_writer = $user_writer;
     }
 }

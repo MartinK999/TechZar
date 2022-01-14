@@ -9,42 +9,42 @@
                     <div class="form-group">
                         <label for="category">Kategória :</label>
                         <select class="form-select mt-3" name="category" id="category" value="<?= $inzerat->getCategory()?>">
-                            <option>Grafické karty</option>
-                            <option>Procesory</option>
-                            <option>Základné dosky</option>
-                            <option>Pamäte RAM</option>
-                            <option>Zdroje</option>
-                            <option>Hard disky</option>
-                            <option>PC chladenie</option>
-                            <option>PC skrine</option>
+                            <option value="Grafické karty">Grafické karty</option>
+                            <option value="Procesory">Procesory</option>
+                            <option value="Základné dosky">Základné dosky</option>
+                            <option value="Pamäte RAM">Pamäte RAM</option>
+                            <option value="Zdroje">Zdroje</option>
+                            <option value="Hard disky">Hard disky</option>
+                            <option value="PC chladenie">PC chladenie</option>
+                            <option value="PC skrine">PC skrine</option>
                         </select>
                     </div>
                     <input type="hidden" name="id" value="<?= $inzerat->getId() ?>">
 
                     <div class="form-group">
                         <label for="title">Nadpis :</label>
-                        <input type = "text" name="title" class="form-control" rows="5" id="title" value="<?= $inzerat->getTitle()?>">
+                        <input type = "text" name="title" class="form-control"  id="title" value="<?= $inzerat->getTitle()?>">
 
                     </div>
                     <div class="form-group">
                         <label for="text">Text :</label>
-                        <textarea class="form-control" type = "text" id="text" rows="3" name="text"><?= $inzerat->getText()?></textarea>
+                        <textarea class="form-control"  id="text" rows="3" name="text"><?= $inzerat->getText()?></textarea>
 
 
                     </div>
                     <div class="form-group">
                         <label for="address">Adresa :</label>
-                        <input type = "text" name="address" class="form-control" rows="5"  id="address" value="<?= $inzerat->getAddress()?>">
+                        <input type = "text" name="address" class="form-control"  id="address" value="<?= $inzerat->getAddress()?>">
 
                     </div>
                     <div class="form-group">
                         <label for="phone_number">Telefónne číslo :</label>
-                        <input type = "text" name="phone_number" class="form-control" rows="5"  id="mobil" value="<?= $inzerat->getPhoneNumber()?>">
+                        <input type = "text" name="phone_number" class="form-control"   id="mobil" value="<?= $inzerat->getPhoneNumber()?>">
 
                     </div>
                     <div class="form-group">
                         <label for="price">Cena :</label>
-                        <input type = "text" name="price" class="form-control" rows="5"  id="price" value="<?= $inzerat->getPrice()?>">
+                        <input type = "text" name="price" class="form-control" id="price" value="<?= $inzerat->getPrice()?>">
 
                     </div>
                     <div class="mb-3">

@@ -7,14 +7,14 @@
                 <div class="form-group">
                     <label for="category">Kategória :</label>
                     <select  class="form-select mt-3" name="category" id="category"  required>
-                        <option>Grafické karty</option>
-                        <option>Procesory</option>
-                        <option>Základné dosky</option>
-                        <option>Pamäte RAM</option>
-                        <option>Zdroje</option>
-                        <option>Hard disky</option>
-                        <option>PC chladenie</option>
-                        <option>PC skrine</option>
+                        <option value="Grafické karty">Grafické karty</option>
+                        <option value="Procesory">Procesory</option>
+                        <option value="Základné dosky">Základné dosky</option>
+                        <option value="Pamäte RAM">Pamäte RAM</option>
+                        <option value="Zdroje">Zdroje</option>
+                        <option value="Hard disky">Hard disky</option>
+                        <option value="PC chladenie">PC chladenie</option>
+                        <option value="PC skrine">PC skrine</option>
                     </select>
 
                 </div>

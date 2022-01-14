@@ -7,6 +7,7 @@ use App\Core\Model;
 class Users extends \App\Core\Model
 {
     public function __construct(
+        public int $id = 0,
         public ?string $login = "",
         public ?string $fullname = "",
         public ?string $email = "",
@@ -17,7 +18,7 @@ class Users extends \App\Core\Model
 
     static public function setDbColumns()
     {
-       return ['login','fullname','email','password'];
+       return ['id','login','fullname','email','password'];
     }
 
     static public function setTableName()
@@ -87,5 +88,21 @@ class Users extends \App\Core\Model
     public function setPassword(?string $password): void
     {
         $this->password = $password;
+    }
+
+    /**
+     * @return int
+     */
+    public function getId(): int
+    {
+        return $this->id;
+    }
+
+    /**
+     * @param int $id
+     */
+    public function setId(int $id): void
+    {
+        $this->id = $id;
     }
 }

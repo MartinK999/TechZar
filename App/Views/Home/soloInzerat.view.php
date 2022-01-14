@@ -2,21 +2,56 @@
 <div class="container solo">
     <?php foreach ($data['inzeraty'] as $inzerat ) {
         foreach ($data['users'] as $user) {
-        if ($inzerat->getId() == $data['inzeratId'] && $inzerat->getLoginFK() == $user->getLogin()) { ?>
+        if ($inzerat->getId() == $data['inzeratId'] && $inzerat->getUserId() == $user->getId()) { ?>
         <div class="row allProducts">
-
             <div class="col" >
-
                 <div class="container title solo">
-
                             <mark><?= $inzerat->getTitle() ?></mark>
-
-
                 </div>
-                <div class="row solofoto">
-                    <img class="img solo" src="<?= \App\Config\Configuration::UPLOAD_DIR . $inzerat->getImage() ?>" class="rounded" alt="Bez obrazku" >
 
+
+
+
+
+
+
+
+                <!-- https://stackoverflow.com/questions/67117035/bootstrap-5-carousel-not-sliding -->
+
+                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img class="img solo" src="<?= \App\Config\Configuration::UPLOAD_DIR . $inzerat->getImage() ?>" class="rounded"  class="d-block " alt="Bez obrazku">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="img solo" src="<?= \App\Config\Configuration::UPLOAD_DIR . $inzerat->getImage() ?>" class="rounded"  class="d-block " alt="Bez obrazku">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="img solo" src="<?= \App\Config\Configuration::UPLOAD_DIR . $inzerat->getImage() ?>" class="rounded"  class="d-block " alt="Bez obrazku">
+
+                        </div>
+
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
                 </div>
+
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+
                 <div class="row textsolo">
                     <p class="text"><?= $inzerat->getText() ?></p>
                 </div>
@@ -35,12 +70,13 @@
 
                     <form method="post" action="?c=home&a=review">
                         <span>Prezívka: </span>
-                        <input type="hidden" name="userLogin"  value="<?= $inzerat->getLoginFk() ?>">
+                        <input type="hidden" name="userId"  value="<?= $inzerat->getUserId() ?>">
+                        <input type="hidden" name="userLogin"  value="<?= $user->getLogin() ?>">
                         <button class="btn btn-primary "
                                 style="background: none; color:#ffffff; border-color: white"
                                 type="submit">
 
-                            <mark><?= $inzerat->getLoginFk() ?></mark>
+                            <mark><?= $user->getLogin() ?></mark>
                         </button>
                     </form></p>
 

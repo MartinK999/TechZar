@@ -2,7 +2,7 @@
 <?php $pocetInzeratov=0?>
 
 <div class="container allProducts">
-    <?php foreach ($data['inzeraty'] as $inzerat) { if ($inzerat->getLoginFk() == $_SESSION['name'])
+    <?php foreach ($data['inzeraty'] as $inzerat) { if ($inzerat->getUserId() == $_SESSION['id'])
         { ?>
         <div class="row allProducts">
 

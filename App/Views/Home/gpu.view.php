@@ -22,16 +22,10 @@
             <img class="img-fluid grafiky" src="<?= \App\Config\Configuration::UPLOAD_DIR . $inzerat->getImage() ?>" class="rounded" alt="Bez obrazku" >
             <p class="text"><?= $inzerat->getText() ?></p>
         </div>
-
-
     </div>
     <div class="col-sm-2">
         <p class="cena"><strong><?= $inzerat->getPrice() ?>€</strong></p>
-
-
-
     </div>
-
 </div>
     <?php } } ?>
 </div>

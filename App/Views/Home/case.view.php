@@ -7,7 +7,6 @@
                 <div class="col-sm-10">
 
                     <div class="container inzeraty">
-
                         <p>
                         <form method="post" action="?c=home&a=soloInzerat">
                             <input type="hidden" name="inzeratId" value="<?= $inzerat->getId() ?>">

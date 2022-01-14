@@ -14,7 +14,7 @@ class Inzerat extends \App\Core\Model
         public int $phone_number = 0,
         public int $price = 0,
         public ?string $image = "",
-        public ?string $login_fk = ""
+        public int $user_id = 0
     )
     {
 
@@ -22,7 +22,7 @@ class Inzerat extends \App\Core\Model
 
     static public function setDbColumns()
     {
-        return ['id','category','title','text','address','phone_number','price','image','login_fk'];
+        return ['id','category','title','text','address','phone_number','price','image','user_id'];
     }
 
     static public function setTableName()
@@ -159,18 +159,19 @@ class Inzerat extends \App\Core\Model
     }
 
     /**
-     * @return string|null
+     * @return int
      */
-    public function getLoginFk(): ?string
+    public function getUserId(): int
     {
-        return $this->login_fk;
+        return $this->user_id;
     }
 
     /**
-     * @param string|null $login_fk
+     * @param int $user_id
      */
-    public function setLoginFk(?string $login_fk): void
+    public function setUserId(int $user_id): void
     {
-        $this->login_fk = $login_fk;
+        $this->user_id = $user_id;
     }
+
 }

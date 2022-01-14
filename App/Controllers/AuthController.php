@@ -62,10 +62,11 @@ class AuthController extends AControllerRedirect
         }
         $users = Users::getAll();
         $userLogin = $this->request()->getValue('login');
-
+        $userId = $this->request()->getValue('userId');
         return $this->html(
             [
                 'users' => $users,
+                'userId' => $userId,
                 'login' => $userLogin
             ]);
     }
@@ -80,7 +81,8 @@ class AuthController extends AControllerRedirect
 
 
         foreach ($users as $u) {
-            if($u->getLogin() == $this->request()->getValue('login')){
+            if($u->getId() == $this->request()->getValue('id')){
+                $u->setLogin($this->request()->getValue('login'));
 
                 $u->setFullname($this->request()->getValue('fullname'));
                 $u->setEmail($this->request()->getValue('email'));
@@ -88,7 +90,7 @@ class AuthController extends AControllerRedirect
 
 
                 $u->save();
-
+                $_SESSION["name"] = $u->getLogin();
             }
 
         }
@@ -134,15 +136,15 @@ class AuthController extends AControllerRedirect
         if(!Auth::isLogged()){
             $this->redirect('home');
         }
-        $userLogin = $this->request()->getValue('login');
+        $userId = $this->request()->getValue('id');
         $users = Users::getAll();
         $inzeraty = Inzerat::getAll();
         $reviews = Review::getAll();
         foreach ($users as $u) {
-            if($userLogin == $u->getLogin())
+            if($userId == $u->getId())
             {
                 foreach ($reviews as $r) {
-                    if($userLogin == $r->getUserWriter())
+                    if($userId == $r->getUserWriter())
                     {
 
                         $r->delete();
@@ -150,7 +152,7 @@ class AuthController extends AControllerRedirect
                 }
 
                 foreach ($inzeraty as $i) {
-                    if($userLogin == $i->getLoginFk())
+                    if($userId == $i->getUserId())
                     {
 
                         $i->delete();
@@ -230,7 +232,7 @@ class AuthController extends AControllerRedirect
                  if ($name == "") {
                      $inzerat->setImage($inzerat->getImage());
                  }
-                $inzerat->setLoginfk($_SESSION["name"]);
+                $inzerat->setUserId($_SESSION["id"]);
                 $inzerat->save();
 
             }

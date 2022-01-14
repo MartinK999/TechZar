@@ -3,8 +3,8 @@
         <div class="container reviewForm">
             <form method="post" enctype="multipart/form-data" action="?c=home&a=uploadReview">
                 <div>
-                    <input type="hidden" name="user_writer" id="user_writer" value="<?= $_SESSION['name'] ?>">
-                    <input type="hidden" name="user_login" id="user_login" value="<?= $data['userLogin'] ?>">
+                    <input type="hidden" name="userWriter" id="userWriter" value="<?= $_SESSION['id'] ?>">
+                    <input type="hidden" name="userId" id="userId" value="<?= $data['userId'] ?>">
 
                     <div class="form-group">
 

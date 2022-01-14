@@ -16,6 +16,8 @@ class Auth
             if ($login == $u->getLogin()) {
                 if ($password == $u->getPassword()) {
                     $_SESSION["name"] = $login;
+                    $id = $u->getId();
+                    $_SESSION["id"] = $id;
                     return true;
                 } else {
                     return false;
@@ -47,6 +49,7 @@ class Auth
     public static function logout()
     {
         unset($_SESSION['name']);
+        unset($_SESSION['id']);
         session_destroy();
     }
 
@@ -59,5 +62,10 @@ class Auth
     public static function getName()
     {
         return (Auth::isLogged() ? $_SESSION['name'] : "");
+    }
+
+    public static function getUserId()
+    {
+        return (Auth::isLogged() ? $_SESSION['id'] : "");
     }
 }
