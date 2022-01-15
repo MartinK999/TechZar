@@ -41,19 +41,12 @@
                     <input type = "text" name="phone_number"  class="form-control" id="mobil" required>
 
                 </div>
-                <div class="form-group">
+                <div class="mb-3 form-group">
                     <label for="price">Cena :</label>
                     <input type = "text" name="price" class="form-control" id="price" required>
-
                 </div>
-                <div class="mb-3">
-                    <label for="formFile" class="form-label">Obrázok :</label>
-                    <input name="file" class="form-control" id="formFile" type="file">
-                </div>
-
                 <div id="submit-info">
                     Formulár obsahuje chyby a nie je možné ho odoslať.
-
                 </div>
                 <div class="mb-3">
                     <button type="submit" class="btn btn-primary" id="submit">Odoslať</button>

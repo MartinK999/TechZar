@@ -35,7 +35,7 @@
 
                         <div class="mb-3 updateProfile">
                             <input type="hidden" name="id" value="<?= $user->getId() ?>">
-                            <button type="submit" class="btn btn-primary"  id="submit">Upraviť</button>
+                            <button type="submit" class="btn btn-primary"  id="submit" onclick="return confirm('Ste si istý že chcete upraviť váš účet?');">Upraviť</button>
                         </div>
                     </div>
                 </form>

@@ -1,9 +1,11 @@
 <?php /** @var Array $data $data */ ?>
 
+
 <div class="row ">
     <?php foreach ($data['users'] as $user) {
     if ($user->getId() == $_SESSION['id']) { ?>
     <div class="col mt-110">
+
 
         <div class="container ">
             <div class="row mb-3">
@@ -58,16 +60,22 @@
             <form method="post" action="?c=auth&a=deleteProfile">
                 <input type="hidden" name="id" value="<?= $user->getId() ?>">
                 <div style="text-align: center">
-                    <button type="submit" class="btn btn-danger" data-d-smiss="alert"><strong>Vymazať účet!</strong>
+                    <button type="submit" class="btn btn-danger" data-d-smiss="alert" onclick="return confirm('Ste si istý že chcete vymazať váš účet?');"><strong>Vymazať účet!</strong>
                     </button>
                 </div>
             </form>
+
+
+
+
             </div>
         </div>
 
     </div>
 </div>
-    </div>
 <?php }
 } ?>
-</div>
+
+
+<!-- https://getbootstrap.com/docs/5.0/components/modal/#options -->
+

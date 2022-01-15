@@ -13,8 +13,8 @@ class Inzerat extends \App\Core\Model
         public ?string $address = "",
         public int $phone_number = 0,
         public int $price = 0,
-        public ?string $image = "",
-        public int $user_id = 0
+        public int $user_id = 0,
+        public ?string $date = ""
     )
     {
 
@@ -22,7 +22,7 @@ class Inzerat extends \App\Core\Model
 
     static public function setDbColumns()
     {
-        return ['id','category','title','text','address','phone_number','price','image','user_id'];
+        return ['id','category','title','text','address','phone_number','price','user_id','date'];
     }
 
     static public function setTableName()
@@ -113,22 +113,6 @@ class Inzerat extends \App\Core\Model
     /**
      * @return string|null
      */
-    public function getImage(): ?string
-    {
-        return $this->image;
-    }
-
-    /**
-     * @param string|null $image
-     */
-    public function setImage(?string $image): void
-    {
-        $this->image = $image;
-    }
-
-    /**
-     * @return string|null
-     */
     public function getAddress(): ?string
     {
         return $this->address;
@@ -172,6 +156,22 @@ class Inzerat extends \App\Core\Model
     public function setUserId(int $user_id): void
     {
         $this->user_id = $user_id;
+    }
+
+    /**
+     * @return string|null
+     */
+    public function getDate(): ?string
+    {
+        return $this->date;
+    }
+
+    /**
+     * @param string|null $date
+     */
+    public function setDate(?string $date): void
+    {
+        $this->date = $date;
     }
 
 }

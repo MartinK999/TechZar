@@ -6,6 +6,7 @@ use App\Auth;
 use App\Config\Configuration;
 use App\Core\Responses\Response;
 use App\Models\Inzerat;
+use App\Models\Photos;
 use App\Models\Review;
 use App\Models\users;
 
@@ -122,9 +123,18 @@ class AuthController extends AControllerRedirect
         }
         $inzeratId = $this->request()->getValue('id');
         $inzeraty = Inzerat::getAll();
+        $photos = Photos::getAll();
         foreach ($inzeraty as $i) {
         if($inzeratId == $i->getId())
-        {
+            {
+                foreach ($photos as $p) {
+                    if($inzeratId == $p->getInzeratId())
+                    {
+                        $p->delete();
+                    }
+                }
+
+
                 $i->delete();
             }
         }
@@ -140,6 +150,7 @@ class AuthController extends AControllerRedirect
         $users = Users::getAll();
         $inzeraty = Inzerat::getAll();
         $reviews = Review::getAll();
+        $photos = Photos::getAll();
         foreach ($users as $u) {
             if($userId == $u->getId())
             {
@@ -154,6 +165,13 @@ class AuthController extends AControllerRedirect
                 foreach ($inzeraty as $i) {
                     if($userId == $i->getUserId())
                     {
+                        foreach ($photos as $p) {
+                            if($i->getId() == $p->getInzeratId())
+                            {
+
+                                $p->delete();
+                            }
+                        }
 
                         $i->delete();
                     }
@@ -221,17 +239,7 @@ class AuthController extends AControllerRedirect
                 $inzerat->setAddress($this->request()->getValue('address'));
                 $inzerat->setPrice($this->request()->getValue('price'));
 
-                if (isset($_FILES['file'])) {
-                    if ($_FILES["file"]["error"] == UPLOAD_ERR_OK) {
-                        $name = date('Y-m-d-H-i-s_') . $_FILES['file']['name'];
-                        move_uploaded_file($_FILES['file']['tmp_name'], Configuration::UPLOAD_DIR . "$name");
 
-                        $inzerat->setImage($name);
-                    }
-                }
-                 if ($name == "") {
-                     $inzerat->setImage($inzerat->getImage());
-                 }
                 $inzerat->setUserId($_SESSION["id"]);
                 $inzerat->save();
 

@@ -1,4 +1,5 @@
 <?php /** @var Array $data */ ?>
+<?php $p = 0 ?>
 <div class="container allProducts">
     <?php foreach ($data['inzerat'] as $inzerat) { if ($inzerat->getCategory() == "Grafické karty") { ?>
 <div class="row allProducts">
@@ -18,8 +19,32 @@
 
 
                 </button>
+                <p class="text date"><?= $inzerat->getDate() ?></p>
             </form></p>
-            <img class="img-fluid grafiky" src="<?= \App\Config\Configuration::UPLOAD_DIR . $inzerat->getImage() ?>" class="rounded" alt="Bez obrazku" >
+
+
+            <?php foreach ($data['photos'] as $photos) { ?>
+
+
+                <?php for ($i = 0; $i < 10; $i++) {
+                    if ($inzerat->getId() == $photos->getInzeratId()) { ?>
+                        <?php if ($p == 0) {
+                            $p++ ?>
+                            <img class="img-fluid grafiky"
+                                 src="<?= \App\Config\Configuration::UPLOAD_DIR . $photos->getImage() ?>"
+                                 class="rounded" alt="Bez obrazku">
+                        <?php } ?>
+                        <?php break; } } ?>
+            <?php } ?>
+            <?php $p = 0 ?>
+
+
+
+
+
+
+
+
             <p class="text"><?= $inzerat->getText() ?></p>
         </div>
     </div>

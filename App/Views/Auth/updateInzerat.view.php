@@ -42,14 +42,10 @@
                         <input type = "text" name="phone_number" class="form-control"   id="mobil" value="<?= $inzerat->getPhoneNumber()?>">
 
                     </div>
-                    <div class="form-group">
+                    <div class="form-group mb-3">
                         <label for="price">Cena :</label>
                         <input type = "text" name="price" class="form-control" id="price" value="<?= $inzerat->getPrice()?>">
 
-                    </div>
-                    <div class="mb-3">
-                        <label for="formFile" class="form-label">Obrázok :</label>
-                        <input name="file" class="form-control" id="formFile" type="file">
                     </div>
 
                     <div id="submit-info">
