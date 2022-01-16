@@ -1,25 +1,32 @@
 <?php /** @var Array $data */ ?>
 <div class="container allProducts">
     <?php $pridane = false  ?>
+    <?php $inzeratuser = false  ?>
 
     <br>
     <h4><strong>Recenzie na používateľa: </strong><?php echo $data['userLogin'] ?></h4>
     <?php if (\App\Auth::isLogged()) { ?>
+
     <?php foreach ($data['reviews'] as $review ) {
+
+    if ($data['userId'] == $review->getUserId() )  {
     if($review->getUserWriter() == $_SESSION['id'])
-    { $pridane = true; }}?>
+    { $pridane = true; }}
 
 
+    }?>
+
+    <?php if($pridane == false && $data['userLogin'] != $_SESSION['name'] )  {?>
 
 
-
-    <?php if($pridane == false){?>
-            <form method="post" action="?c=home&a=reviewForm">
+            <form method="post" action="?c=review&a=reviewForm">
                 <input type="hidden" name="userId" value="<?= $data['userId']?>">
                 <button class="btn btn-secondary " type="submit">
                     <p class="review button">Napíš recenziu</p>
                 </button>
-            </form> <?php } ?>
+            </form>
+
+        <?php } ?>
     <?php } ?>
    <?php foreach ($data['reviews'] as $review) {
         if ($review->getUserId() == $data['userId']) { ?>
@@ -51,7 +58,7 @@
             <?php if (\App\Auth::isLogged()) { ?>
                     <?php if ($review->getUserWriter() == $_SESSION['id']) { ?>
 
-                            <form method="post" action="?c=home&a=deleteReview">
+                            <form method="post" action="?c=review&a=deleteReview">
                                 <input type="hidden" name="id" value="<?= $review->getId() ?>">
                                 <div class="alert alert-danger alert-dismissible">
                                     <button type="submit" class="btn-close" data-dismiss="alert" ></button>

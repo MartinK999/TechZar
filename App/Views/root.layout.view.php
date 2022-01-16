@@ -38,16 +38,16 @@
                     <p class="vitajte" style="padding-top: 2%">Vitajte, <?php echo $_SESSION['name'] ?>!</p>
 
                     <li class="nav-item">
-                        <a href="?c=Auth&a=logout" class="btn btn-danger" role="button">Odhlásiť</a>
+                        <a href="?c=profile&a=logout" class="btn btn-danger" role="button">Odhlásiť</a>
                     </li>
                 <?php } else { ?>
 
                     <li class="nav-item">
-                        <a href="?c=Auth&a=loginForm" class="btn btn-dark" role="button">Prihlásenie</a>
+                        <a href="?c=profile&a=loginForm" class="btn btn-dark" role="button">Prihlásenie</a>
                     </li>
 
                     <li class="nav-item">
-                        <a href="?c=Auth&a=registrationForm" class="btn btn-primary" role="button">Registrácia</a>
+                        <a href="?c=profile&a=registrationForm" class="btn btn-primary" role="button">Registrácia</a>
                     </li>
                 <?php } ?>
             </ul>
@@ -79,23 +79,23 @@
                 <a class="nav-link" href="?c=home">Domov</a>
             </li>
             <li class="nav-item ">
-                <a class="nav-link" href="?c=home&a=myList">Moje inzeráty</a>
+                <a class="nav-link" href="?c=profile&a=myList">Moje inzeráty</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="?c=home&a=inzeratForm">Pridať inzerát</a>
+                <a class="nav-link" href="?c=inzerat&a=inzeratForm">Pridať inzerát</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="?c=home&a=contact">Kontakt</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="?c=Auth&a=settings">Účet</a>
+                <a class="nav-link" href="?c=profile&a=settings">Účet</a>
             </li>
         <?php } else { ?>
             <li class="nav-item">
                 <a class="nav-link" href="?c=home">Domov</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="?c=Auth&a=loginForm">Pridať inzerát</a>
+                <a class="nav-link" href="?c=profile&a=loginForm">Pridať inzerát</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="?c=home&a=contact">Kontakt</a>

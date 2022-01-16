@@ -1,7 +1,9 @@
 <?php /** @var Array $data */ ?>
+<script src="public/skriptReview.js"></script>
+
     <div class="col">
         <div class="container reviewForm">
-            <form method="post" enctype="multipart/form-data" action="?c=home&a=uploadReview">
+            <form method="post" enctype="multipart/form-data" action="?c=review&a=uploadReview">
                 <div>
                     <input type="hidden" name="userWriter" id="userWriter" value="<?= $_SESSION['id'] ?>">
                     <input type="hidden" name="userId" id="userId" value="<?= $data['userId'] ?>">
@@ -14,7 +16,7 @@
                                 <!-- https://bbbootstrap.com/snippets/animated-rating-stars-18298447 -->
                                 <div class="col-md-12">
                                     <div class="stars">
-                                            <input class="star star-5" id="star-5" value="5" type="radio" name="rating" />
+                                            <input class="star star-5" id="star-5" value="5" type="radio" name="rating" checked/>
                                                 <label class="star star-5" for="star-5"></label>
                                             <input class="star star-4" id="star-4" value="4" type="radio" name="rating" />
                                                 <label class="star star-4" for="star-4"></label>
@@ -31,7 +33,7 @@
 
 
                         <label for="text">Vaša recenzia:</label>
-                        <textarea class="form-control" type = "text" id="exampleFormControlTextarea1" rows="3" name="text"></textarea>
+                        <textarea class="form-control" type ="text" id="text" rows="3" name="text" required></textarea>
 
                     </div>
                     <div class="mb-3 reviewForm">

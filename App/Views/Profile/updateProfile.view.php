@@ -1,4 +1,6 @@
 <?php /** @var Array $data */ ?>
+<script src="public/skriptUpdateProfile.js"></script>
+
 <div class="row justify-content-sm-center">
     <?php foreach ($data['users'] as $user){ if ($user->getLogin() == $data['login']){?>
         <div class="col-sm-6">
@@ -6,7 +8,14 @@
                 <div class="row mb-3">
                     <h3><strong>Upraviť účet: </strong></h3>
                 </div>
-                <form method="post" enctype="multipart/form-data" action="?c=auth&a=makeUpdateProfile">
+                <?php if ($data['error'] != "") { ?>
+                    <div class="alert alert-danger alert-dismissible" style="text-align: center">
+
+                        <?= $data['error'] ?>
+                    </div>
+                <?php } ?>
+                <form method="post" enctype="multipart/form-data" action="?c=profile&a=makeUpdateProfile">
+
                     <div>
                         <div class="form-group">
                             <label for="login">Prezívka :</label>
@@ -28,10 +37,6 @@
 
                         </div>
 
-
-                        <div id="submit-info">
-                            Formulár obsahuje chyby a nie je možné ho odoslať.
-                        </div>
 
                         <div class="mb-3 updateProfile">
                             <input type="hidden" name="id" value="<?= $user->getId() ?>">
