@@ -3,6 +3,7 @@
 
 <div class="row justify-content-sm-center">
     <?php foreach ($data['users'] as $user){ if ($user->getLogin() == $data['login']){?>
+
         <div class="col-sm-6">
             <div class="container">
                 <div class="row mb-3">
@@ -32,8 +33,8 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="password">Heslo :</label>
-                            <input type = "text" name="password" class="form-control" id="password" value="<?= $user->getPassword()?>" required>
+                            <label for="password">Heslo (prepíšte pre zmenu hesla) :</label>
+                            <input type = "password" name="password" class="form-control" id="password" value="<?= $user->getPassword()?>" required>
 
                         </div>
 

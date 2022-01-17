@@ -26,7 +26,7 @@ class ProfileController extends AControllerRedirect
     {
         $login = $this->request()->getValue('login');
         $password = $this->request()->getValue('password');
-
+        $password = md5($password);
         $logged = Auth::login($login,$password);
 
         if ($logged){
@@ -45,7 +45,8 @@ class ProfileController extends AControllerRedirect
         $newUser->setLogin($this->request()->getValue('login'));
         $newUser->setFullname($this->request()->getValue('fullname'));
         $newUser->setEmail($this->request()->getValue('email'));
-        $newUser->setPassword($this->request()->getValue('password'));
+        $hash = $this->request()->getValue('password');
+        $newUser->setPassword(md5($hash));
 
         $registered = Auth::register($this->request()->getValue('login'),$this->request()->getValue('email'));
         if ($registered == 3){
@@ -128,7 +129,8 @@ class ProfileController extends AControllerRedirect
                 $u->setLogin($this->request()->getValue('login'));
                 $u->setFullname($this->request()->getValue('fullname'));
                 $u->setEmail($this->request()->getValue('email'));
-                $u->setPassword($this->request()->getValue('password'));
+                $upass = $this->request()->getValue('password');
+                $u->setPassword(md5($upass));
 
 
                 $registered = Auth::register2($this->request()->getValue('login'),$this->request()->getValue('email'),$this->request()->getValue('id'));

@@ -120,15 +120,11 @@ class InzeratController extends AControllerRedirect
         $newPhoto = new Photos();
         if (isset($_FILES['file1'])) {
             if ($_FILES["file1"]["error"] == UPLOAD_ERR_OK) {
-                $nameCheck1 = $_FILES['file1']['name'];
                 $name1 = date('Y-m-d-H-i-s_') . $_FILES['file1']['name'];
                 move_uploaded_file($_FILES['file1']['tmp_name'], Configuration::UPLOAD_DIR . "$name1");
                 $newPhoto->setInzeratId($this->request()->getValue('inzeratId'));
                 $newPhoto->setImage($name1);
-                $ext = pathinfo($nameCheck1, PATHINFO_EXTENSION);
-                if (!in_array($ext, $allowed)) {
-                    $this->redirect('home');
-                }
+
                 $newPhoto->save();
             }
         }
@@ -138,10 +134,7 @@ class InzeratController extends AControllerRedirect
                 move_uploaded_file($_FILES['file2']['tmp_name'], Configuration::UPLOAD_DIR . "$name2");
                 $newPhoto->setInzeratId($this->request()->getValue('inzeratId'));
                 $newPhoto->setImage($name2);
-                $ext = pathinfo($name2, PATHINFO_EXTENSION);
-                if (!in_array($ext, $allowed)) {
-                    $this->redirect('home');
-                }
+
                 $newPhoto->save();
             }
         }
@@ -151,10 +144,7 @@ class InzeratController extends AControllerRedirect
                 move_uploaded_file($_FILES['file3']['tmp_name'], Configuration::UPLOAD_DIR . "$name3");
                 $newPhoto->setInzeratId($this->request()->getValue('inzeratId'));
                 $newPhoto->setImage($name3);
-                $ext = pathinfo($name3, PATHINFO_EXTENSION);
-                if (!in_array($ext, $allowed)) {
-                    $this->redirect('home');
-                }
+
                 $newPhoto->save();
             }
         }

@@ -1,39 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ca3d041d-373e-47ee-8d99-77b197850bb7" name="Changes" comment="hotova databaza fotky">
-      <change afterPath="$PROJECT_DIR$/App/Controllers/CategoryController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/App/Controllers/InzeratController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/App/Controllers/ProfileController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/App/Controllers/ReviewController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/skriptLogin.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/skriptReview.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/skriptUpdateProfile.js" afterDir="false" />
+    <list default="true" id="ca3d041d-373e-47ee-8d99-77b197850bb7" name="Changes" comment="kontrola formularov">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/Auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Auth.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/Controllers/AuthController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/Views/Auth/loginForm.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Views/Profile/loginForm.view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/Views/Auth/registrationForm.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Views/Profile/registrationForm.view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/Views/Auth/settings.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Views/Profile/settings.view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/Views/Auth/updateInzerat.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Views/Inzerat/updateInzerat.view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/Views/Auth/updateProfile.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Views/Profile/updateProfile.view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/Views/Home/case.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Views/Category/case.view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/Views/Home/cooling.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Views/Category/cooling.view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/Views/Home/cpu.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Views/Category/cpu.view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/Views/Home/gpu.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Views/Category/gpu.view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/Views/Home/hdd.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Views/Category/hdd.view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/Views/Home/index.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Views/Home/index.view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/Views/Home/inzeratForm.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Views/Inzerat/inzeratForm.view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/Views/Home/mb.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Views/Category/mb.view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/Views/Home/myList.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Views/Profile/myList.view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/Views/Home/photosForm.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Views/Inzerat/photosForm.view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/Views/Home/psu.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Views/Category/psu.view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/Views/Home/ram.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Views/Category/ram.view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/Views/Home/review.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Views/Review/review.view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/Views/Home/reviewForm.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Views/Review/reviewForm.view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/Views/Home/soloInzerat.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Views/Inzerat/soloInzerat.view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/Views/root.layout.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Views/root.layout.view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Controllers/InzeratController.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Controllers/InzeratController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Controllers/ProfileController.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Controllers/ProfileController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Views/Profile/updateProfile.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/Views/Profile/updateProfile.view.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,7 +72,7 @@
       <workItem from="1641842539747" duration="53990000" />
       <workItem from="1642090921093" duration="43815000" />
       <workItem from="1642233949841" duration="21111000" />
-      <workItem from="1642325092160" duration="23087000" />
+      <workItem from="1642325092160" duration="28979000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1638215690448</created>
@@ -172,7 +144,14 @@
       <option name="project" value="LOCAL" />
       <updated>1642289959403</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="kontrola formularov">
+      <created>1642359459492</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1642359459492</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -202,6 +181,7 @@
     <MESSAGE value="pridanie verifikacie uprave inzeratu a pridanie ikonky v zalozke" />
     <MESSAGE value="update + delete user + zaciatok galerie fotiek" />
     <MESSAGE value="hotova databaza fotky" />
-    <option name="LAST_COMMIT_MESSAGE" value="hotova databaza fotky" />
+    <MESSAGE value="kontrola formularov" />
+    <option name="LAST_COMMIT_MESSAGE" value="kontrola formularov" />
   </component>
 </project>
