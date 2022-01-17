@@ -1,11 +1,12 @@
 <?php /** @var Array $data */ ?>
+
+<script  src="public/skriptHome.js"></script>
 <div class="container pt-3">
 
     <div class="row justify-content-center">
-        <div class="col-6 col-md">
+        <div class="col-6 col-md ">
             <div class="popisTabu">Grafické karty</div>
-            <a href="?c=category&a=gpu"><img class="img-fluid rounded"  src="public/images_hlavnaStranka/gpuTAB.jpg" alt="logo"></a>
-
+            <a href="?c=category&a=gpu"><img onmouseover="increase()" onmouseout="decrease()" class="img-fluid rounded  "  id="img1"  width="100" src="public/images_hlavnaStranka/gpuTAB.jpg" alt="logo"></a>
         </div>
         <div class="col-6 col-md ">
             <div class="popisTabu">Procesory</div>

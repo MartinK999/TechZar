@@ -12,6 +12,10 @@ class Auth
     public static function login($login, $password)
     {
         $users = Users::getAll();
+        $user = Users::getAll('login=?',[$login]);
+        if ($user == false) {
+            return false;
+        }
 
         foreach ($users as $u) {
             if ($login == $u->getLogin()) {

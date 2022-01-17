@@ -15,6 +15,7 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="public/skript.js"></script>
+    <script  src="public/skriptHome.js"></script>
     <link rel="shortcut icon" type="image/jpg" href="public/images_hlavnaStranka/TechZarLogoZalozka.png"/>
 
 </head>
@@ -58,12 +59,16 @@
 <div class="row ">
     <div class="col-sm">
         <div class="background" style="background-image: url(public/images_hlavnaStranka/searchBarFilter.jpeg)">
+            <div class="post-content">
             <div class="container">
+            <div class="form-group">
+                <div class="input-group">
 
-                <form class="d-flex">
-                    <input class="form-control me-2" type="search" placeholder="Tu napíšte, čo hľadáte">
-                    <button class="btn btn-success" type="submit">Hľadaj</button>
-                </form>
+                    <input type="text" name="search_text" id="search_text" class="form-control me-2"  placeholder="Tu napíšte, čo hľadáte">
+                </div>
+                </div>
+                <div id="result"></div>
+            </div>
             </div>
         </div>
     </div>
