@@ -166,7 +166,6 @@ p.cenaa {
 }
 
 
-
 p.cena {
     margin-top: 80%;
     text-align: center;
@@ -205,6 +204,8 @@ mark.style:hover {
     padding-left: 0;
     padding-top: 0;
     padding-bottom: 20%;
+
+
 
 
 
@@ -258,6 +259,7 @@ ul {
 }
 
 .container.solo{
+
     padding-top: 0;
 }
 
@@ -287,8 +289,8 @@ ul {
 
 
 .img-fluid.rounded {
-    width: 100% !important;
-    height: 100% !important;
+
+
     object-fit: cover;
     padding-bottom: 15%;
 }
@@ -398,12 +400,8 @@ ul {
     padding: 0px;
 }
 
-li:hover {
-}
-
-
 footer {
-
+    margin-top: 70%;
     background-color: black;
     color: white;
     text-align: center;
@@ -411,6 +409,11 @@ footer {
 
 
 
+}
+
+.row.contacts {
+    text-align: center;
+    align-content: center;
 }
 
 

@@ -12,13 +12,14 @@
                         <p>
                         <form method="post" action="?c=inzerat&a=soloInzerat">
                             <input type="hidden" name="inzeratId" value="<?= $inzerat->getId() ?>">
-                            <button class="btn btn-primary  text-uppercase fw-bold"
-                                    style="background: none; color:#64496d; border-color: white" class="floated"
+                            <button class="btn btn-primary  floated text-uppercase fw-bold"
+                                    style="background: none; color:#64496d; border-color: white"
                                     type="submit">
 
                                 <mark class="style"><?= $inzerat->getTitle() ?></mark>
                             </button>
-                        </form></p>
+                        </form>
+                        </p>
                         <?php foreach ($data['photos'] as $photos) { ?>
 
 

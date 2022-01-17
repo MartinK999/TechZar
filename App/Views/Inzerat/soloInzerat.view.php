@@ -72,10 +72,13 @@
 
                     <p class="text"><?= $inzerat->getText() ?></p>
                 </div>
+                <div class="row cena " style="float: end">
+                    <p class="cenaaa"><strong><?= $inzerat->getPrice() ?>€</strong></p>
+                </div>
 
             </div>
 
-            <div class="row contacts" >
+            <div class="row contacts"  style="float: start">
                 <div class="col">
                 <p class="soloInfo" style="text-decoration: underline;">Kontakty:</p>
                 <p class="mobil">Tel. číslo: <strong><?= $inzerat->getPhoneNumber() ?></strong></p>
@@ -111,9 +114,6 @@
 
         </div>
 
-            <div class="row cena">
-                <p class="cenaa"><strong><?= $inzerat->getPrice() ?>€</strong></p>
-            </div>
 
 
     <?php } } }?>
