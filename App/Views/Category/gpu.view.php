@@ -1,5 +1,6 @@
 <?php /** @var Array $data */ ?>
 <?php $p = 0 ?>
+
 <div class="container allProducts">
     <?php foreach ($data['inzerat'] as $inzerat) { if ($inzerat->getCategory() == "Grafické karty") { ?>
 <div class="row allProducts">

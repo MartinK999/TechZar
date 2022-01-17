@@ -21,35 +21,6 @@
 
 
 
-                        <?php
-
-                        function kontrolaTypu($subor){
-                            $pripony = array('jpg', 'jpeg', 'png');
-                            $pripona = pathinfo($subor['name'],PATHINFO_EXTENSION);//najde poslednu bodku a zoberie vsetky znaky za nou
-
-                            if(in_array($pripona,$pripony)){
-                                return 1;
-                            }else{
-                                return 0;
-                            }
-                        }
-
-                        function kontrolaVelkost($subor){
-                            if($subor['size'] <= 512000){
-                                return 1;
-                            }else{
-                                return 0;
-                            }
-                        }
-                        ?>
-
-
-
-
-
-
-
-
                         <div class="mb-3">
                             <label for="formFile" class="form-label">Obrázok 1:</label>
                             <input name="file1" class="form-control" id="formFile" type="file">
@@ -64,10 +35,8 @@
                             <input name="file3" class="form-control" id="formFile" type="file">
                         </div>
 
-                        <div id="submit-info">
-                            Formulár obsahuje chyby a nie je možné ho odoslať.
 
-                        </div>
+
                         <div class="mb-3">
                             <button type="submit" class="btn btn-primary" id="submit">Odoslať</button>
                         </div>

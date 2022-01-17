@@ -1,4 +1,6 @@
 <?php /** @var Array $data */ ?>
+<script src="public/skriptDelete.js"></script>
+
 <div class="container allProducts">
     <?php $pridane = false  ?>
     <?php $inzeratuser = false  ?>
@@ -60,8 +62,13 @@
 
                             <form method="post" action="?c=review&a=deleteReview">
                                 <input type="hidden" name="id" value="<?= $review->getId() ?>">
+
+
+                                <input type="hidden" name="sender" value="<?= $_SESSION['id'] ?>">
+                                <input type="hidden" id="receiver" name="receiver" value="<?= $review->getUserWriter()  ?>">
+
                                 <div class="alert alert-danger alert-dismissible">
-                                    <button type="submit" class="btn-close" data-dismiss="alert" ></button>
+                                    <button type="submit" class="btn-close" id="delete-review" data-dismiss="alert" ></button>
                                     <strong>Vymazať recenziu!</strong>
                                 </div>
                             </form>

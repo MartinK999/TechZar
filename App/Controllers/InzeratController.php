@@ -22,6 +22,8 @@ class InzeratController extends AControllerRedirect
             ]);
     }
 
+
+
     public function inzeratForm()
     {
         if (!Auth::isLogged()) {

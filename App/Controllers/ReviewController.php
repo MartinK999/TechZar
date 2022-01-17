@@ -21,6 +21,7 @@ class ReviewController extends AControllerRedirect
         // TODO: Implement index() method.
     }
 
+
     public function reviewForm()
     {
         $userLogin = $this->request()->getValue('userLogin');
@@ -44,6 +45,7 @@ class ReviewController extends AControllerRedirect
         foreach ($reviews as $r) {
             if($reviewId == $r->getId())
             {
+
                 $r->delete();
             }
         }

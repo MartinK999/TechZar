@@ -22,6 +22,8 @@ class ProfileController extends AControllerRedirect
             ]);
     }
 
+
+
     public function login()
     {
         $login = $this->request()->getValue('login');

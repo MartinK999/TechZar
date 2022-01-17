@@ -68,6 +68,8 @@
                     <p class="cena"><strong><?= $inzerat->getPrice() ?>€</strong></p>
                     <form method="post" action="?c=inzerat&a=deleteInzerat">
                         <input type="hidden" name="id" value="<?= $inzerat->getId() ?>">
+
+
                         <div class="alert alert-danger alert-dismissible">
                             <button type="submit" class="btn-close" data-dismiss="alert"></button>
                             <strong>Vymazať inzerát!</strong>

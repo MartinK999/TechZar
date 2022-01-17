@@ -15,6 +15,7 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="public/skript.js"></script>
+
     <link rel="shortcut icon" type="image/jpg" href="public/images_hlavnaStranka/TechZarLogoZalozka.png"/>
 
 </head>
@@ -89,11 +90,12 @@
                 <a class="nav-link" href="?c=inzerat&a=inzeratForm">Pridať inzerát</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="?c=home&a=contact">Kontakt</a>
-            </li>
-            <li class="nav-item">
                 <a class="nav-link" href="?c=profile&a=settings">Účet</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="?c=home&a=contact">Kontakt</a>
+            </li>
+
         <?php } else { ?>
             <li class="nav-item">
                 <a class="nav-link" href="?c=home">Domov</a>
